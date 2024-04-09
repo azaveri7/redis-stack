@@ -1,0 +1,83 @@
+Redis Stack Course
+
+Components of Redis Stack
+
+RediSearch
+RedisGraph
+RedisTimeSeries
+RedisBloom
+Redis Insight
+
+=============================
+
+How to run RedisStack on docker
+
+docker run -d - -name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+
+docker ps
+
+Open
+localhost:8001
+
+localhost:8001/redis-stack/browser
+
+==============================
+
+We are going to use RedisJSON to store RedisDocuments and RedisTimeSeries to show cryptocurrency fluctuations
+over different periods of time.
+
+==============================
+
+
+Create spring boot application crypto-rankings-service
+
+Maven project
+
+Group : com.paathshala
+
+Artifact: crypto-rankings-service
+
+package name: com.paathshala.crypto
+
+JDK: 11
+
+Packaging: Jar
+
+Dependencies: Lombok, Spring Web
+
+===============================
+
+Adding Redis Stack Libraries
+
+redis-java-modules
+
+pom.xml
+
+Include all
+
+<dependency>
+	<groupId>io.github.dengliming.redismodule</groupId>
+	<artifactId>all</artifactId>
+	<version>1.0.5</version>
+</dependency>
+
+
+Include single module like:
+
+<dependency>
+	<groupId>io.github.dengliming.redismodule</groupId>
+	<artifactId>redistimeseries</artifactId>
+	<version>1.0.5</version>
+</dependency>
+
+=============
+Rapid API
+=============
+
+rapidapi.com
+
+Sign up and login to it.
+
+Search crypto, you will get all Crypto related APIs
+
+Choose Coinranking
