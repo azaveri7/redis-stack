@@ -81,3 +81,55 @@ Sign up and login to it.
 Search crypto, you will get all Crypto related APIs
 
 Choose Coinranking
+
+
+==================
+
+Time series data is stored as TS in redis-stack
+
+To query any TimeSerices (TS) data use query like
+
+Query command in Redis-stack workbench
+TS.INFO BTC:3y
+
+Reponse outuput:
+
+1) "totalSamples"
+2) "1094"
+3) "memoryUsage"
+4) "17736"
+5) "firstTimestamp"
+6) "1618012800"
+7) "lastTimestamp"
+8) "1712707200"
+9) "retentionTime"
+10) "0"
+11) "chunkCount"
+12) "7"
+13) "chunkSize"
+14) "4096"
+15) "chunkType"
+16) "uncompressed"
+17) "duplicatePolicy"
+18) "null"
+19) "labels"
+20) (empty list or set)
+21) "sourceKey"
+22) "null"
+23) "rules"
+24) (empty list or set)
+
+Command query in redis-stack workbench
+
+TS.RANGE BTC:3y  1618012800 1712707200
+
+You can see the graph in UI of redis-stack
+
+=============================
+Two URLs for 2 REST APIs are:
+
+1.
+http://localhost:8082/api/v1/coins
+
+2.
+http://localhost:8082/api/v1/coins/BTC/24h
