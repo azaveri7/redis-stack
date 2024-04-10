@@ -24,4 +24,16 @@ public class CoinInfo {
     private String _24hVolume;
     private String btcPrice;
 
+    public String getName(){
+        return name;
+    }
+
+    public String getUuid(){
+        return uuid;
+    }
+
+    public String getSymbol(){
+        return symbol;
+    }
+
 }

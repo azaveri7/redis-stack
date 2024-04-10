@@ -9,4 +9,8 @@ import java.util.List;
 public class CoinPriceHistoryData {
     private String change;
     private List<CoinPriceHistoryExchangeRate> history = new ArrayList<>();
+
+    public List<CoinPriceHistoryExchangeRate> getHistory() {
+        return history;
+    }
 }

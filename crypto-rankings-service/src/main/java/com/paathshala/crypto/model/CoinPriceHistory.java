@@ -6,4 +6,8 @@ import lombok.Data;
 public class CoinPriceHistory {
     private String status;
     private CoinPriceHistoryData data;
+
+    public CoinPriceHistoryData getData(){
+        return data;
+    }
 }
