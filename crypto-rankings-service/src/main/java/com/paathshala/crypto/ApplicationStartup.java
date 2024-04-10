@@ -14,7 +14,8 @@ public class ApplicationStartup implements ApplicationListener<ApplicationReadyE
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
-        //coinsDataService.fetchCoins();
-        //coinsDataService.fetchCoinHistory();
+        // We can comment the code once the data is stored in Redis
+        coinsDataService.fetchCoins();
+        coinsDataService.fetchCoinHistory();
     }
 }
