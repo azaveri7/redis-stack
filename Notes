@@ -133,3 +133,10 @@ http://localhost:8082/api/v1/coins
 
 2.
 http://localhost:8082/api/v1/coins/BTC/24h
+
+
+=========
+UI app
+=========
+
+npx create-next-app crypto-rankings-ui
